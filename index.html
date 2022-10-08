@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title>JNTUA SGPA Calculator For R20, R19 SGPA Online</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta property="og:type" content="article" />
+    <script src="main.js"></script>
+
+</head>
+
+<body>    
+    <center>
+        <br>
+        <br>
+        
+        <h3 style="color: orange;"><span style="color:#B22222;"><span style="font-family:trebuchet ms,helvetica,sans-serif;"><span style="font-size:18px;">JNTUA B.Tech SGPA(Semester Grade Point Average) Calculator</span></span>
+            </span>
+        </h3>
+    </center>
+    
+    </div>
+    
+    <center>
+        <div id="sgpa">
+            <center><h3>YOUR SGPA IS : 0/10</h3></center>
+
+        </div>
+    </center>
+
+        <div id="newlink">
+        <div class="row">
+            <div class="col-xs-12">
+                <a><p id="addnew" style="text-align: center;"><a class="btn btn-success" style="width:98%" href="javascript:new_link()">Add New Subject</a>
+                </p>
+            </div>
+        </div>
+        <br>
+        
+        <br>
+        <div id="1">
+            <div class="row">
+                <div class="col-xs-3">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Subject" />
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="form-group">
+                        <select class="form-control" name="gp[]">
+			<option value="-">Grade</option>
+			<option value="10">S</option>
+			<option value="9">A</option>
+			<option value="8">B</option>
+			<option value="7">C</option>
+			<option value="6">D</option>
+            <option value="5">E</option>
+			<option value="0">F</option>
+			</select>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="form-group">
+                        <input class="form-control" type="text" autocomplete="off" name="cre[]" placeholder="Credits" value="" maxlength="9" size="9" />
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="form-group">
+                        <a class="btn btn-danger" style="width:100%" href="javascript:delIt(1)">Remove</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Template -->
+    <div id="newlinktpl" style="display:none">
+        <div class="row">
+            <div class="col-xs-3 ">
+                <div class="form-group"> <input class="form-control" type="text" placeholder="Subject" /></div>
+            </div>
+            <div class="col-xs-3 ">
+                <div class="form-group">
+                    <select name="gp[]" class="form-control"><option value="-">Grade</option><option value="9">S</option><option value="8">A</option><option value="7">B</option><option value="6">C</option><option value="5">D</option><option value="0">F</option></select></div>
+            </div>
+
+            <div class="col-xs-3">
+                <div class="form-group"> <input class="form-control" type="text" autocomplete="off" placeholder="Credits" name="cre[]" value="" maxlength="9" size="9" /> </div>
+            </div>
+            <div class="col-xs-3" id="del"></div>
+        </div>
+        <input type="hidden" name="total" id="total" value="0" readonly="" />
+    </div>
+    
+    <div class="col-xs-12">
+        <a class="btn btn-info" style="width: 101%" onclick="findTotal()">Calculate SGPA</a>
+    </div>
+
+    <script>
+        findTotal();
+    </script>
+    <br>
+  
+    <!-- footer Start -->
+    <br>
+    <div class="container-fluid">
+        <div class="space" style="text-align: center;">
+            <span style="font-family:lucida sans unicode,lucida grande,sans-serif;">
+                <a href="https://www.facebook.com/jayakumaar.mikkileneni" class="fa fa-facebook" target="_blank"></a>
+                <a href="https://www.linkedin.com/in/m-jaya-kumaar-jk-2a684820a/" class="fa fa-linkedin" target="_blank"></a>
+                <a href="https://instagram.com/jayakumar_chowdhary?igshid=zuog05mw1qr0" class="fa fa-instagram" target="_blank"></a>
+            </span>
+        </div>
+    </div>
+    <div class="space-2" style="text-align: center;"></div>
+    <!-- footer End -->
+
+</body>
+
+</html>
